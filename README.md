@@ -30,6 +30,6 @@ The name of the output PDF file.
 ```yaml
 uses: lyuwen/build-latex-action@v1
 with:
-  file: 'main.pdf'
+  file: 'main.tex'
   options: '-shell-escape'
 ```
