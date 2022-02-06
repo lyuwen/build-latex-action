@@ -1,0 +1,27 @@
+# action.yml
+name: 'Build LaTeX Document'
+description: 'Build LaTeX document into a PDF file.'
+inputs:
+  file:  # name of input
+    description: 'Name of the file to build.'
+    required: true
+    default: 'main.tex'
+  directory:  # name of input
+    description: 'The directory to build from.'
+    required: false
+    default: '.'
+  options:  # extra options
+    description: 'list of other options.'
+    required: false
+    default: ''
+outputs:
+  output:  # name of output
+    description: 'Name of the output file.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  entrypoint: 'entrypoint.sh'
+  args:
+    - ${{ inputs.directory }}
+    - '-interaction=nonstopmode -pdf ${{ inputs.options }}' 
+    - ${{ inputs.file }}
