@@ -25,3 +25,6 @@ runs:
     - ${{ inputs.directory }}
     - '-interaction=nonstopmode -pdf ${{ inputs.options }}' 
     - ${{ inputs.file }}
+branding:
+  icon: 'file-text'  
+  color: 'blue'
