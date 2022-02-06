@@ -20,7 +20,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: 'entrypoint.sh'
+  entrypoint: '/entrypoint.sh'
   args:
     - ${{ inputs.directory }}
     - '-interaction=nonstopmode -pdf ${{ inputs.options }}' 
