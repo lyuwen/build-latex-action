@@ -19,7 +19,8 @@ outputs:
     description: 'Name of the output file.'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  # image: 'Dockerfile'
+  image: 'docker://ghcr.io/lyuwen/build-latex-action:latest'
   entrypoint: '/entrypoint.sh'
   args:
     - ${{ inputs.directory }}
