@@ -24,7 +24,7 @@ runs:
   entrypoint: '/entrypoint.sh'
   args:
     - ${{ inputs.directory }}
-    - '-interaction=nonstopmode -pdf ${{ inputs.options }}' 
+    - '-interaction=nonstopmode -xelatex ${{ inputs.options }}' 
     - ${{ inputs.file }}
 branding:
   icon: 'file-text'  
