@@ -20,7 +20,7 @@ outputs:
 runs:
   using: 'docker'
   # image: 'Dockerfile'
-  image: 'docker://ghcr.io/lyuwen/build-latex-action:latest'
+  image: 'docker://ghcr.io/lyuwen/build-latex-action:chinese'
   entrypoint: '/entrypoint.sh'
   args:
     - ${{ inputs.directory }}
